@@ -1,0 +1,28 @@
+ALGORITHM readsentence( sentence)
+VAR
+// The length of the sentence
+nlength : INTEGER ;
+// The number of words in the sentence 
+nwords : INTEGER :=1;
+// The number of vowels in the sentence
+nvowels : INTEGER :=0;
+BEGIN
+nlength = sentence.length;
+IF (sentence[nlength-1]<>"") THEN
+    Write("The last character is not the.")
+ELSE
+    FOR i FROM 0 TO nlength-1 DO
+        IF (sentence[i]="a" or sentence[i]="e" or sentence[i]="i" or sentence[i]="u"or sentence[i]="o" or sentence[i]="A" or sentence[i]="E" or sentence[i]="I" or sentence[i]="U" or sentence[i]="O" ) THEN
+            nvowels=nvowels+1;
+        END_IF
+    END_FOR
+    FOR i FROM 1 TO nlength-3   DO
+        IF (sentence[i]=" ") THEN
+            nwords=nwords+1;
+        END_IF
+    END_FOR
+     Write("The length of the sentence = " nlength)
+     Write("The number of words in the sentence = "nwords )
+     Write("The number of vowels in the sentence = " nvowels)
+END_IF
+END
